@@ -520,7 +520,7 @@ $dbView->generateInsert($table);
 
 $_SESSION['startRow'] = 0;
 
-$_SESSION['numRows'] = 100;
+$_SESSION['numRows'] = 45;
 
 
 if(!isset($_GET['sort']))
