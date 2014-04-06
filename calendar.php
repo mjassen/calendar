@@ -338,14 +338,8 @@ $_SESSION['startRow'] = $startRow;
 $query = "SELECT *, ROWID FROM ".$table;
 $queryDisp = "SELECT * FROM ".$table;
 $queryAdd = "";
-//show only yesterday's engagements and onwards. date('Y-m-d H:i')
-$queryAdd .= " WHERE date > '".date('Y-m-').(date('d')-1)."' ";
-//if($sort!=NULL)
-//$queryAdd .= " ORDER BY ".$sort;
 $queryAdd .= " ORDER BY date";
-//if($order!=NULL)
-//$queryAdd .= " ".$order;
-$queryAdd .= " ASC";
+$queryAdd .= " DESC";
 $queryAdd .= " LIMIT ".$startRow.", ".$numRows;
 $query .= $queryAdd;
 $queryDisp .= $queryAdd;
